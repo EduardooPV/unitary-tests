@@ -1,10 +1,11 @@
 import { ButtonProps } from 'components/Button/Button.types'
 import React, { FC } from 'react'
-import { getSizeClass, getVariantClass } from './stylesMap'
+import { button } from './ButtonVariants'
 
 const Button: FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
+  className,
   testId,
   onClick,
   children,
@@ -14,9 +15,7 @@ const Button: FC<ButtonProps> = ({
     <button
       data-testid={testId}
       onClick={onClick}
-      className={`text-white rounded
-         ${getVariantClass(variant)} 
-         ${getSizeClass(size)}`}
+      className={button({ variant, size, className })}
       {...rest}
     >
       {children}

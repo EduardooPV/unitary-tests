@@ -19,18 +19,24 @@ const Countdown: FC = () => {
       data-testid="countdownTest"
       className="flex items-center justify-center gap-10 pt-10"
     >
-      <Button testId="incrementButton" onClick={() => addCount()}>
-        Add +
-      </Button>
-
-      <p data-testid="countResult">{count}</p>
-
       <Button
         testId="decrementButton"
         variant="danger"
         onClick={() => removeCount()}
+        className={`${
+          count === 0
+            ? 'bg-transparent  border-red-500 hover:bg-transparent'
+            : ''
+        }`}
+        disabled={count === 0 ? true : false}
       >
         Remove -
+      </Button>
+
+      <p data-testid="countResult">{count}</p>
+
+      <Button testId="incrementButton" onClick={() => addCount()}>
+        Add +
       </Button>
     </article>
   )
