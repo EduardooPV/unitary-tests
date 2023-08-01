@@ -11,7 +11,8 @@ const customJestConfig = {
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,
   modulePaths: ['<rootDir>/src/'],
-  collectCoverageFrom: ['src/components/**/*.ts(x)?', '!src/**/stories.tsx']
+  collectCoverageFrom: ['src/components/**/*.ts(x)?', '!src/**/stories.tsx'],
+  automock: false
 }
 
 module.exports = createJestConfig(customJestConfig)

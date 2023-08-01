@@ -58,8 +58,6 @@ describe('<Countdown />', () => {
 
     const decrementButton = screen.getByTestId('decrementButton')
 
-    screen.debug(decrementButton)
-
     expect(decrementButton).toHaveAttribute('disabled')
   })
 

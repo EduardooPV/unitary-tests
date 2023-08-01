@@ -1,5 +1,5 @@
 import Countdown from 'components/Countdown'
-import Button from 'components/Button'
+import PostsPlaceholder from 'components/PostsPlaceholder'
 
 export default function Home() {
   return (
@@ -7,6 +7,8 @@ export default function Home() {
       <h1 className="text-3xl">Testing with Jest and Testing Library</h1>
 
       <Countdown />
+
+      <PostsPlaceholder />
     </main>
   )
 }
